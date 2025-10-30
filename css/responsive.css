@@ -1,0 +1,31 @@
+@import url("variables.css");
+@media (min-width: 1400px){
+  .container-grid{max-width:1600px}
+  .card{grid-column:span 4}
+}
+@media (min-width: 992px){
+  .card{grid-column:span 4}
+  .header img{height:64px}
+  .menu-toggle{display:none}
+}
+@media (max-width: 991px) and (min-width: 768px){
+  .container-grid{grid-template-columns:repeat(8,1fr)}
+  .card{grid-column:span 4}
+  .header img{height:56px}
+  .menu-toggle{display:block}
+}
+@media (max-width: 767px){
+  .container-grid{grid-template-columns:repeat(4,1fr);gap:12px;padding:0 var(--space-2)}
+  .card{grid-column:span 4}
+  .header{padding:12px}
+  .header nav{display:none;position:absolute;left:0;top:70px;width:100%;background:var(--color-primary-dark);padding:16px;border-radius:0}
+  .header nav.open{display:block}
+  .menu-toggle{display:block}
+  .header img{height:48px}
+  .stats{flex-direction:column;gap:8px}
+}
+@media (max-width: 400px){
+  .container-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .card{grid-column:span 2}
+  .lead{font-size:1rem}
+}

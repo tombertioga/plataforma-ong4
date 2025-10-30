@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plataforma ONG - Cadastro</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .erro{ color: #c53030; font-size: 0.9rem; margin-top: 6px; display:block }
+    .success { color: #0b8457; font-weight:700 }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="branding">
+      <img src="../imagens/logo.jpg" alt="Logo ONG">
+      <div class="text-branding"><div class="small">Plataforma</div><strong>Plataforma ONG</strong></div>
+    </div>
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+    <nav>
+      <ul>
+        <li><a href="../index/index.html">Início</a></li>
+        <li><a href="../projetos/projetos.html">Projetos</a></li>
+        <li><a href="../cadastro/cadastro.html" class="active">Cadastro</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" style="padding-top:32px;padding-bottom:32px">
+      <div class="container-grid">
+        <div style="grid-column:span 6;">
+          <h1>Cadastro de Voluntários</h1>
+          <p class="small">Preencha o formulário e faça parte da nossa rede.</p>
+
+          <form class="form" id="cadastroForm" novalidate>
+            <fieldset>
+              <legend>Dados Pessoais</legend>
+
+              <label for="nome">Nome completo</label>
+	      <input id="nome" name="nome" type="text" required>
+	      <div class="error"></div>
+		
+	      <label for="cpf">CPF</label>
+	      <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" required>
+              <div class="error"></div>
+
+	      <label for="telefone">Telefone</label>
+	      <input id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" required>
+              <div class="error"></div>	
+
+       	      <label for="email">E-mail</label>
+	      <input id="email" name="email" type="email" required>
+	      <div class="error"></div>	
+            </fieldset>
+
+            <fieldset>
+              <legend>Áreas de Interesse</legend>
+              <label><input type="checkbox" name="area" value="educacao"> Educação</label><br>
+              <label><input type="checkbox" name="area" value="saude"> Saúde</label><br>
+              <label><input type="checkbox" name="area" value="meioambiente"> Meio Ambiente</label>
+              <span class="erro" data-for="area"></span>
+            </fieldset>
+
+            <input class="button btn-primary" type="submit" value="Enviar Cadastro">
+            <div id="formMessage" style="margin-top:12px"></div>
+          </form>
+        </div>
+
+        <div style="grid-column:span 6;">
+          <div class="card">
+            <h3>Por que ser voluntário?</h3>
+            <p>Apoiando nossos projetos você transforma vidas e aprende novas habilidades.</p>
+            <img src="../imagens/voluntarios.jpg" alt="Voluntários" style="width:100%;border-radius:8px;margin-top:12px">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- scripts: scripts.js primeiro (menu), depois a validação -->
+  <script src="../js/scripts.js"></script>
+  <script src="../js/form-validation.js"></script>
+</body>
+</html>
