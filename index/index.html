@@ -5,15 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plataforma ONG - Início</title>
   <link rel="stylesheet" href="../css/style.css">
+  <script defer src="../js/script.js"></script>
 </head>
+
 <body>
-  <header class="header">
+  <header class="header" role="banner">
     <div class="branding">
-      <img src="../imagens/logo.jpg" alt="Logo ONG">
-      <div class="text-branding"><div class="small">Plataforma</div><strong>Plataforma ONG</strong></div>
+      <img src="../imagens/logo.jpg" alt="Logotipo da ONG" width="80" height="80">
+      <div class="text-branding">
+        <div class="small">Plataforma</div>
+        <strong>Plataforma ONG</strong>
+      </div>
     </div>
-    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-    <nav>
+
+    <button class="menu-toggle" aria-label="Abrir menu de navegação" aria-controls="menu-principal" aria-expanded="false">☰</button>
+
+    <nav id="menu-principal" role="navigation" aria-label="Navegação principal">
       <ul>
         <li><a href="../index/index.html" class="active">Início</a></li>
         <li><a href="../projetos/projetos.html">Projetos</a></li>
@@ -21,7 +28,8 @@
       </ul>
     </nav>
   </header>
-  <main>
+
+  <main role="main">
     <section class="section cta-section" style="padding-top:32px;padding-bottom:8px;">
       <div class="container-grid">
         <div style="grid-column:span 7;">
@@ -32,46 +40,61 @@
             <a class="button btn-secondary" href="../projetos/projetos.html">Conhecer Projetos</a>
           </div>
         </div>
+
         <div style="grid-column:span 5;">
           <div class="card">
-            <div class="card-img"><img src="../imagens/voluntarios.jpg" alt="Voluntários"></div>
+            <div class="card-img">
+              <img src="../imagens/voluntarios.jpg" alt="Voluntários ajudando em projeto comunitário" width="100%" height="auto">
+            </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="section">
+
+    <section class="section" aria-labelledby="atuacao">
       <div class="container-grid">
         <div style="grid-column:span 12;" class="text-center">
-          <h2>Nossa atuação</h2>
+          <h2 id="atuacao">Nossa atuação</h2>
           <p class="small">Projetos que geram impacto nas comunidades.</p>
         </div>
-        <div style="grid-column:span 4;">
+
+        <article style="grid-column:span 4;">
           <div class="card">
             <h3>Projeto Esperança</h3>
             <p>Educação para crianças em situação de vulnerabilidade.</p>
-            <div style="margin-top:12px;"><a class="button btn-primary" href="../projetos/projetos.html">Ver projeto</a></div>
+            <div style="margin-top:12px;">
+              <a class="button btn-primary" href="../projetos/projetos.html">Ver projeto</a>
+            </div>
           </div>
-        </div>
-        <div style="grid-column:span 4;">
+        </article>
+
+        <article style="grid-column:span 4;">
           <div class="card">
             <h3>Saúde Comunitária</h3>
             <p>Atendimentos e campanhas preventivas.</p>
-            <div style="margin-top:12px;"><a class="button btn-primary" href="../projetos/projetos.html">Ver projeto</a></div>
+            <div style="margin-top:12px;">
+              <a class="button btn-primary" href="../projetos/projetos.html">Ver projeto</a>
+            </div>
           </div>
-        </div>
-        <div style="grid-column:span 4;">
+        </article>
+
+        <article style="grid-column:span 4;">
           <div class="card">
             <h3>Meio Ambiente</h3>
             <p>Educação ambiental e mutirões de limpeza.</p>
-            <div style="margin-top:12px;"><a class="button btn-primary" href="../projetos/projetos.html">Ver projeto</a></div>
+            <div style="margin-top:12px;">
+              <a class="button btn-primary" href="../projetos/projetos.html">Ver projeto</a>
+            </div>
           </div>
-        </div>
+        </article>
       </div>
     </section>
-    <section class="section">
+
+    <section class="section" aria-labelledby="estatisticas">
       <div class="container-grid">
         <div style="grid-column:span 12;text-align:center">
-          <div class="stats">
+          <h2 id="estatisticas">Nossos Resultados</h2>
+          <div class="stats" role="region" aria-label="Indicadores de impacto social">
             <div class="stat"><strong>450+</strong><span>Pessoas Ajudadas</span></div>
             <div class="stat"><strong>6</strong><span>Projetos Ativos</span></div>
             <div class="stat"><strong>120</strong><span>Voluntários</span></div>
@@ -80,9 +103,9 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+
+  <footer class="footer" role="contentinfo">
     <p>&copy; 2025 Plataforma ONG - Todos os direitos reservados.</p>
   </footer>
-  <script src="../js/scripts.js"></script>
 </body>
 </html>
